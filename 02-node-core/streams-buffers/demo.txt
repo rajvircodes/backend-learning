@@ -1,0 +1,1 @@
+Hello world from demo file this is example of streams 
