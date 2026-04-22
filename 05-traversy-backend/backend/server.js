@@ -4,11 +4,11 @@ const app = express();
 const goalRoutes = require('./routes/goals.routes')
 const {errorHandler} = require('./middleware/errorMiddleware')
 const connectDB = require('./config/db')
-
-
+const cookieParser = require('cookie-parser')
 connectDB()
 
 app.use(express.json())
+app.use(cookieParser())
 app.use(express.urlencoded({extended:true}))
 app.use('/api/goals', goalRoutes)
 
